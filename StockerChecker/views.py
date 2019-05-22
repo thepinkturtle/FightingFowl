@@ -5,8 +5,11 @@ from django.shortcuts import render
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from StockerChecker.forms import DocumentForm
+from pprint import pprint
+from itertools import izip
 import json
 import os
+
 
 # Create your views here.
 
@@ -35,13 +38,19 @@ def model_form_upload(request):
     })
 
 def process_diff(request):
+    skis_ = "Skis"
+    shovels_ = "Shovels"
+    sleds_ = "Sleds"
+    snowblowers_ = "Snowblowers"
+    winter_tires_ = "Winter tires"
     cwd = os.getcwd()
     relative_path = os.path.join( os.getcwd(), 'media', 'documents', 'upload1test.json')
     print( relative_path )
 
     with open( relative_path ) as json_file:
         data = json.load( json_file )
-        # for item_ordered in data[ 'item_ordered' ]:
-        #     print("The item order was: " + item_ordered )
-        #     print('')
+    for i in data:
+        print i['item_ordered']
+   
+            
     return render(request, 'model_form_upload.html')
