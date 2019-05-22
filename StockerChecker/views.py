@@ -36,12 +36,12 @@ def model_form_upload(request):
 
 def process_diff(request):
     cwd = os.getcwd()
-    relative_path = os.path.join( os.getcwd(), 'media', 'documents', 'upload1test.json.txt')
+    relative_path = os.path.join( os.getcwd(), 'media', 'documents', 'upload1test.json')
     print( relative_path )
 
     with open( relative_path ) as json_file:
         data = json.load( json_file )
-        for item_ordered in data[ 'item_ordered' ]:
-            print("The item order was: " + item_ordered )
-            print('')
+        # for item_ordered in data[ 'item_ordered' ]:
+        #     print("The item order was: " + item_ordered )
+        #     print('')
     return render(request, 'model_form_upload.html')
