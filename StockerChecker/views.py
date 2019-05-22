@@ -43,6 +43,13 @@ def process_diff(request):
     sleds_ = "Sleds"
     snowblowers_ = "Snowblowers"
     winter_tires_ = "Winter tires"
+    year = ""
+    month = ""
+    day_time = ""
+    day = ""
+    time = ""
+    date = ""
+
     cwd = os.getcwd()
     relative_path = os.path.join( os.getcwd(), 'media', 'documents', 'upload1test.json')
     print( relative_path )
@@ -50,7 +57,15 @@ def process_diff(request):
     with open( relative_path ) as json_file:
         data = json.load( json_file )
     for i in data:
-        print i['item_ordered']
+        date = i['order_date'].split('-', 3 )
+        year = date[0]
+        month = date[1]
+        day_time = date[2].split('T', 2)
+        day = day_time[0]
+        time = day_time[1]
+        
+        print ('item_ordered: ' + i['item_ordered'] + ': ' + i['item_quantity'] + ' Year: '  +  year + " Month: " + month + " Day: " + day + " time: " + time  )
+        
    
             
     return render(request, 'model_form_upload.html')
