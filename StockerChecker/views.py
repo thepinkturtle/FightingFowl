@@ -51,7 +51,6 @@ def calculate_success( orders_list, restock_list ):
 
             else:
                 results = 'month: ' + str( month ) + ' day: ' + str(tuple_[1]) + " quantity left: " + str(quantity_left) + ' fail'
-                # restock_list[month].append( results )
                 break
             order_number = order_number + 1
 
@@ -156,36 +155,6 @@ def process_diff(request):
     
     for m in tires_restock:
         print( 'month: ' + str(m) )
-    # for m in skis_restock:
-    #     print( skis_restock[1][0][2])
-    # print('\n')
-    # for m in shovels_restock:
-    #     print( 'month: ' + str(m) )
-    # print('\n')
-    # for m in sleds_restock:
-    #     print( 'month: ' + str(m) )
-    # print('\n')
-    # for m in snowblowers_restock:
-    #     print( 'month: ' + str(m) )
-    # print('\n')
-    # for m in tires_restock:
-    #     print( 'month: ' + str(m) )
-    #print( '\n')
-    
-    # for m in skis_restock:
-    #    print( 'month: ' + str(m) )
-    # print( '\n')
-    # for m in shovels:
-    #    print( 'month: ' + str(m) )
-    # print( '\n')
-    # for m in sleds:
-    #    print( 'month: ' + str(m) )
-    # print( '\n')
-    # for m in snowblowers:
-    #    print( 'month: ' + str(m) )
-    # print( '\n')    
-    # for m in tires:
-    #    print( 'month: ' + str(m) )
 
     return render(request, 'model_form_upload.html')
 
