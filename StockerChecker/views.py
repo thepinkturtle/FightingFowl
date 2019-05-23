@@ -38,7 +38,7 @@ def model_form_upload(request):
         'form': form
     })
 
-def calculate_success( orders_list, restock_list ):
+def calculate_success( orders_list, restock_list, year ):
     month = 0
     quantity_left = 0
     results = ''
@@ -52,7 +52,7 @@ def calculate_success( orders_list, restock_list ):
             if( quantity_left > -1 ):
                 results = 'success ' + 'quantity left: ' + str(quantity_left)
             else:
-                results = 'month: ' + str( month ) + ' day: ' + str(tuple_[1]) + " quantity left: " + str(quantity_left) + ' fail'
+                results = 'Date: ' + str( month + 1 ) + '/' + str(tuple_[1]) + '/' + str( year )  + ': failed'
                 break
             order_number = order_number + 1
 
@@ -133,11 +133,11 @@ def parse_json(request):
             item = ( 'tires', int( month ), int( i['item_quantity'] ) )
             tires_restock[ int( month ) - 1 ].append( item )
     
-    calculate_success( skis, skis_restock )
-    calculate_success( sleds, sleds_restock )
-    calculate_success( shovels, shovels_restock )
-    calculate_success( snowblowers, snowblowers_restock )
-    calculate_success( tires, tires_restock )
+    calculate_success( skis, skis_restock, date[0] )
+    calculate_success( sleds, sleds_restock, date[0] )
+    calculate_success( shovels, shovels_restock, date[0] )
+    calculate_success( snowblowers, snowblowers_restock, date[0] )
+    calculate_success( tires, tires_restock, date[0] )
 
     return render(request, 'results.html', 
             {
