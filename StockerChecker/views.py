@@ -158,6 +158,13 @@ def parse_json(request):
     for m in tires_restock:
         print( 'month: ' + str(m) )
 
-    return render(request, 'model_form_upload.html')
-
-
+    return render(request, 'results.html', 
+            {
+                'skis_results': skis_restock,
+                'sleds_results': sleds_restock,
+                'shovels_results': shovels_restock,
+                'snowblowers_results': snowblowers_restock,
+                'tires_results': tires_restock,
+                'message':'I made it',
+            }
+        )
