@@ -38,27 +38,6 @@ def model_form_upload(request):
         'form': form
     })
 
-# def calculate_success( orders_list, restock_list ):
-#     month = 0
-#     quantity_left = 0
-#     results = ''
-
-#     for orders in orders_list:
-#         order_number = 0
-#         for tuple_ in orders:
-#             print('my tuple: ' + str( tuple_ ) )
-#             quantity_left = int(restock_list[month][0][2]) - int(tuple_[0])
-#             if( quantity_left > -1 ):
-#                 results = 'success ' + 'quantity left: ' + str(quantity_left)
-
-#             else:
-#                 results = 'month: ' + str( month ) + ' day: ' + str(tuple_[1]) + " quantity left: " + str(quantity_left) + ' fail'
-#                 break
-#             order_number = order_number + 1
-
-#         restock_list[month].append( results )
-#         month = month + 1
-
 def calculate_success( orders_list, restock_list ):
     month = 0
     quantity_left = 0
