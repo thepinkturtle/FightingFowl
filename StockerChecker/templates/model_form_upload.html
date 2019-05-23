@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="card card-5" style="margin-left:20%;height:80px; width:50%; background-color:cornsilk; padding-top:10px;">
-        <form method="post" enctype="multipart/form-data"  style="display: inline; margin:10px">
+    <div class="card card-5" style="margin-left:20%;height:80px; width:50%; background-color:#5B5177; padding-top:10px;">
+        <form method="post" enctype="multipart/form-data"  style=" display: inline; margin:10px; color:#E8E8E8;color:#E8E8E8; font-family:Arial;">
             {% csrf_token %}
             {{ form }}
             <button type="submit" class="myButton" style="margin-left:auto; margin-right:auto; width:200px; margin-top:10px;"> Upload Orders </button>
         </form>
     </div>
-    <div class="card card-5" style="margin-left:21%; height:150px; width:50%; background-color:cornsilk; padding-top:10px">
-        <form method="post" enctype="multipart/form-data" style="display: inline; margin:10px">
+    <div class="card card-5" style="margin-left:21%; height:150px; width:50%; background-color:#5B5177; padding-top:10px">
+        <form method="post" enctype="multipart/form-data" style="display: inline; margin:10px; color:#E8E8E8; font-family:Arial;">
             {% csrf_token %}
             {{ form }}
             <button type="submit" class="myButton" style="margin-left:auto; margin-right:auto; width:200px; margin-top:10px;"> Upload Restocks </button>
