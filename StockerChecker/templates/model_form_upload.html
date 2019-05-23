@@ -4,14 +4,14 @@
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Upload 1</button>
+    <button type="submit">Upload Orders</button>
 </form>
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Upload 2</button>
+    <button type="submit">Upload Restocks</button>
 </form>
-<form action="process_diff" method="GET">
+<form action="parse_json" method="GET">
     <button type="submit">Process</button>
 </form>
 {% endblock %}

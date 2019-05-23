@@ -1,0 +1,422 @@
+[
+  {
+    "restock_date": "2018-01-01T04:00:00Z",
+    "item_stocked": "shovel",
+    "item_quantity": 25,
+    "manufacturer": "Knightly Shovels, Inc.",
+    "wholesale_price": 85.6
+  },
+  {
+    "restock_date": "2018-02-01T04:00:00Z",
+    "item_stocked": "shovel",
+    "item_quantity": 10,
+    "manufacturer": "Knightly Shovels, Inc.",
+    "wholesale_price": 73.62
+  },
+  {
+    "restock_date": "2018-03-01T04:00:00Z",
+    "item_stocked": "shovel",
+    "item_quantity": 15,
+    "manufacturer": "Knightly Shovels, Inc.",
+    "wholesale_price": 86.64
+  },
+  {
+    "restock_date": "2018-04-01T04:00:00Z",
+    "item_stocked": "shovel",
+    "item_quantity": 10,
+    "manufacturer": "Knightly Shovels, Inc.",
+    "wholesale_price": 94.03
+  },
+  {
+    "restock_date": "2018-05-01T04:00:00Z",
+    "item_stocked": "shovel",
+    "item_quantity": 5,
+    "manufacturer": "Knightly Shovels, Inc.",
+    "wholesale_price": 78.56
+  },
+  {
+    "restock_date": "2018-06-01T04:00:00Z",
+    "item_stocked": "shovel",
+    "item_quantity": 5,
+    "manufacturer": "Knightly Shovels, Inc.",
+    "wholesale_price": 79.84
+  },
+  {
+    "restock_date": "2018-07-01T04:00:00Z",
+    "item_stocked": "shovel",
+    "item_quantity": 5,
+    "manufacturer": "Knightly Shovels, Inc.",
+    "wholesale_price": 83.44
+  },
+  {
+    "restock_date": "2018-08-01T04:00:00Z",
+    "item_stocked": "shovel",
+    "item_quantity": 5,
+    "manufacturer": "Knightly Shovels, Inc.",
+    "wholesale_price": 74.74
+  },
+  {
+    "restock_date": "2018-09-01T04:00:00Z",
+    "item_stocked": "shovel",
+    "item_quantity": 5,
+    "manufacturer": "Knightly Shovels, Inc.",
+    "wholesale_price": 94.78
+  },
+  {
+    "restock_date": "2018-10-01T04:00:00Z",
+    "item_stocked": "shovel",
+    "item_quantity": 25,
+    "manufacturer": "Knightly Shovels, Inc.",
+    "wholesale_price": 80.34
+  },
+  {
+    "restock_date": "2018-11-01T04:00:00Z",
+    "item_stocked": "shovel",
+    "item_quantity": 15,
+    "manufacturer": "Knightly Shovels, Inc.",
+    "wholesale_price": 94.25
+  },
+  {
+    "restock_date": "2018-12-01T04:00:00Z",
+    "item_stocked": "shovel",
+    "item_quantity": 5,
+    "manufacturer": "Knightly Shovels, Inc.",
+    "wholesale_price": 94.35
+  },
+  {
+    "restock_date": "2018-01-01T16:00:00Z",
+    "item_stocked": "skis",
+    "item_quantity": 5,
+    "manufacturer": "Ice Cap Zone Corp.",
+    "wholesale_price": 89.01
+  },
+  {
+    "restock_date": "2018-02-01T16:00:00Z",
+    "item_stocked": "skis",
+    "item_quantity": 25,
+    "manufacturer": "Ice Cap Zone Corp.",
+    "wholesale_price": 83.42
+  },
+  {
+    "restock_date": "2018-03-01T16:00:00Z",
+    "item_stocked": "skis",
+    "item_quantity": 25,
+    "manufacturer": "Ice Cap Zone Corp.",
+    "wholesale_price": 81.68
+  },
+  {
+    "restock_date": "2018-04-01T16:00:00Z",
+    "item_stocked": "skis",
+    "item_quantity": 5,
+    "manufacturer": "Ice Cap Zone Corp.",
+    "wholesale_price": 96.03
+  },
+  {
+    "restock_date": "2018-05-01T16:00:00Z",
+    "item_stocked": "skis",
+    "item_quantity": 5,
+    "manufacturer": "Ice Cap Zone Corp.",
+    "wholesale_price": 99.16
+  },
+  {
+    "restock_date": "2018-06-01T16:00:00Z",
+    "item_stocked": "skis",
+    "item_quantity": 5,
+    "manufacturer": "Ice Cap Zone Corp.",
+    "wholesale_price": 92.72
+  },
+  {
+    "restock_date": "2018-07-01T16:00:00Z",
+    "item_stocked": "skis",
+    "item_quantity": 5,
+    "manufacturer": "Ice Cap Zone Corp.",
+    "wholesale_price": 99.84
+  },
+  {
+    "restock_date": "2018-08-01T16:00:00Z",
+    "item_stocked": "skis",
+    "item_quantity": 5,
+    "manufacturer": "Ice Cap Zone Corp.",
+    "wholesale_price": 91.39
+  },
+  {
+    "restock_date": "2018-09-01T16:00:00Z",
+    "item_stocked": "skis",
+    "item_quantity": 5,
+    "manufacturer": "Ice Cap Zone Corp.",
+    "wholesale_price": 83.62
+  },
+  {
+    "restock_date": "2018-10-01T16:00:00Z",
+    "item_stocked": "skis",
+    "item_quantity": 10,
+    "manufacturer": "Ice Cap Zone Corp.",
+    "wholesale_price": 91.39
+  },
+  {
+    "restock_date": "2018-11-01T16:00:00Z",
+    "item_stocked": "skis",
+    "item_quantity": 15,
+    "manufacturer": "Ice Cap Zone Corp.",
+    "wholesale_price": 80.31
+  },
+  {
+    "restock_date": "2018-12-01T16:00:00Z",
+    "item_stocked": "skis",
+    "item_quantity": 10,
+    "manufacturer": "Ice Cap Zone Corp.",
+    "wholesale_price": 99.24
+  },
+  {
+    "restock_date": "2018-01-01T20:00:00Z",
+    "item_stocked": "sled",
+    "item_quantity": 25,
+    "manufacturer": "Rosebud, Inc.",
+    "wholesale_price": 85.72
+  },
+  {
+    "restock_date": "2018-02-01T20:00:00Z",
+    "item_stocked": "sled",
+    "item_quantity": 15,
+    "manufacturer": "Rosebud, Inc.",
+    "wholesale_price": 89.21
+  },
+  {
+    "restock_date": "2018-03-01T20:00:00Z",
+    "item_stocked": "sled",
+    "item_quantity": 6,
+    "manufacturer": "Rosebud, Inc.",
+    "wholesale_price": 87.74
+  },
+  {
+    "restock_date": "2018-04-01T20:00:00Z",
+    "item_stocked": "sled",
+    "item_quantity": 4,
+    "manufacturer": "Rosebud, Inc.",
+    "wholesale_price": 87.69
+  },
+  {
+    "restock_date": "2018-05-01T20:00:00Z",
+    "item_stocked": "sled",
+    "item_quantity": 5,
+    "manufacturer": "Rosebud, Inc.",
+    "wholesale_price": 93.31
+  },
+  {
+    "restock_date": "2018-06-01T20:00:00Z",
+    "item_stocked": "sled",
+    "item_quantity": 5,
+    "manufacturer": "Rosebud, Inc.",
+    "wholesale_price": 93.8
+  },
+  {
+    "restock_date": "2018-07-01T20:00:00Z",
+    "item_stocked": "sled",
+    "item_quantity": 5,
+    "manufacturer": "Rosebud, Inc.",
+    "wholesale_price": 87.47
+  },
+  {
+    "restock_date": "2018-08-01T20:00:00Z",
+    "item_stocked": "sled",
+    "item_quantity": 5,
+    "manufacturer": "Rosebud, Inc.",
+    "wholesale_price": 87.53
+  },
+  {
+    "restock_date": "2018-09-01T20:00:00Z",
+    "item_stocked": "sled",
+    "item_quantity": 5,
+    "manufacturer": "Rosebud, Inc.",
+    "wholesale_price": 92.54
+  },
+  {
+    "restock_date": "2018-10-01T20:00:00Z",
+    "item_stocked": "sled",
+    "item_quantity": 10,
+    "manufacturer": "Rosebud, Inc.",
+    "wholesale_price": 85.22
+  },
+  {
+    "restock_date": "2018-11-01T20:00:00Z",
+    "item_stocked": "sled",
+    "item_quantity": 5,
+    "manufacturer": "Rosebud, Inc.",
+    "wholesale_price": 88.03
+  },
+  {
+    "restock_date": "2018-12-01T20:00:00Z",
+    "item_stocked": "sled",
+    "item_quantity": 5,
+    "manufacturer": "Rosebud, Inc.",
+    "wholesale_price": 88.14
+  },
+  {
+    "restock_date": "2018-01-01T06:00:00Z",
+    "item_stocked": "snowblower",
+    "item_quantity": 25,
+    "manufacturer": "Shiveria Manufacturing, LLC",
+    "wholesale_price": 88.65
+  },
+  {
+    "restock_date": "2018-02-01T06:00:00Z",
+    "item_stocked": "snowblower",
+    "item_quantity": 5,
+    "manufacturer": "Shiveria Manufacturing, LLC",
+    "wholesale_price": 85.62
+  },
+  {
+    "restock_date": "2018-03-01T06:00:00Z",
+    "item_stocked": "snowblower",
+    "item_quantity": 5,
+    "manufacturer": "Shiveria Manufacturing, LLC",
+    "wholesale_price": 85.64
+  },
+  {
+    "restock_date": "2018-04-01T06:00:00Z",
+    "item_stocked": "snowblower",
+    "item_quantity": 5,
+    "manufacturer": "Shiveria Manufacturing, LLC",
+    "wholesale_price": 86.94
+  },
+  {
+    "restock_date": "2018-05-01T06:00:00Z",
+    "item_stocked": "snowblower",
+    "item_quantity": 5,
+    "manufacturer": "Shiveria Manufacturing, LLC",
+    "wholesale_price": 81.98
+  },
+  {
+    "restock_date": "2018-06-01T06:00:00Z",
+    "item_stocked": "snowblower",
+    "item_quantity": 5,
+    "manufacturer": "Shiveria Manufacturing, LLC",
+    "wholesale_price": 83.1
+  },
+  {
+    "restock_date": "2018-07-01T06:00:00Z",
+    "item_stocked": "snowblower",
+    "item_quantity": 5,
+    "manufacturer": "Shiveria Manufacturing, LLC",
+    "wholesale_price": 85.35
+  },
+  {
+    "restock_date": "2018-08-01T06:00:00Z",
+    "item_stocked": "snowblower",
+    "item_quantity": 5,
+    "manufacturer": "Shiveria Manufacturing, LLC",
+    "wholesale_price": 81.71
+  },
+  {
+    "restock_date": "2018-09-01T06:00:00Z",
+    "item_stocked": "snowblower",
+    "item_quantity": 5,
+    "manufacturer": "Shiveria Manufacturing, LLC",
+    "wholesale_price": 82.74
+  },
+  {
+    "restock_date": "2018-10-01T06:00:00Z",
+    "item_stocked": "snowblower",
+    "item_quantity": 5,
+    "manufacturer": "Shiveria Manufacturing, LLC",
+    "wholesale_price": 89.71
+  },
+  {
+    "restock_date": "2018-11-01T06:00:00Z",
+    "item_stocked": "snowblower",
+    "item_quantity": 20,
+    "manufacturer": "Shiveria Manufacturing, LLC",
+    "wholesale_price": 82.57
+  },
+  {
+    "restock_date": "2018-12-01T06:00:00Z",
+    "item_stocked": "snowblower",
+    "item_quantity": 15,
+    "manufacturer": "Shiveria Manufacturing, LLC",
+    "wholesale_price": 82.24
+  },
+  {
+    "restock_date": "2018-01-01T10:00:00Z",
+    "item_stocked": "tires",
+    "item_quantity": 20,
+    "manufacturer": "Great Glacier Goods, Inc.",
+    "wholesale_price": 83.06
+  },
+  {
+    "restock_date": "2018-02-01T10:00:00Z",
+    "item_stocked": "tires",
+    "item_quantity": 15,
+    "manufacturer": "Great Glacier Goods, Inc.",
+    "wholesale_price": 89.38
+  },
+  {
+    "restock_date": "2018-03-01T10:00:00Z",
+    "item_stocked": "tires",
+    "item_quantity": 5,
+    "manufacturer": "Great Glacier Goods, Inc.",
+    "wholesale_price": 80.31
+  },
+  {
+    "restock_date": "2018-04-01T10:00:00Z",
+    "item_stocked": "tires",
+    "item_quantity": 5,
+    "manufacturer": "Great Glacier Goods, Inc.",
+    "wholesale_price": 81.85
+  },
+  {
+    "restock_date": "2018-05-01T10:00:00Z",
+    "item_stocked": "tires",
+    "item_quantity": 5,
+    "manufacturer": "Great Glacier Goods, Inc.",
+    "wholesale_price": 80.67
+  },
+  {
+    "restock_date": "2018-06-01T10:00:00Z",
+    "item_stocked": "tires",
+    "item_quantity": 5,
+    "manufacturer": "Great Glacier Goods, Inc.",
+    "wholesale_price": 86.29
+  },
+  {
+    "restock_date": "2018-07-01T10:00:00Z",
+    "item_stocked": "tires",
+    "item_quantity": 5,
+    "manufacturer": "Great Glacier Goods, Inc.",
+    "wholesale_price": 85.43
+  },
+  {
+    "restock_date": "2018-08-01T10:00:00Z",
+    "item_stocked": "tires",
+    "item_quantity": 5,
+    "manufacturer": "Great Glacier Goods, Inc.",
+    "wholesale_price": 83.73
+  },
+  {
+    "restock_date": "2018-09-01T10:00:00Z",
+    "item_stocked": "tires",
+    "item_quantity": 5,
+    "manufacturer": "Great Glacier Goods, Inc.",
+    "wholesale_price": 83.1
+  },
+  {
+    "restock_date": "2018-10-01T10:00:00Z",
+    "item_stocked": "tires",
+    "item_quantity": 5,
+    "manufacturer": "Great Glacier Goods, Inc.",
+    "wholesale_price": 87.47
+  },
+  {
+    "restock_date": "2018-11-01T10:00:00Z",
+    "item_stocked": "tires",
+    "item_quantity": 5,
+    "manufacturer": "Great Glacier Goods, Inc.",
+    "wholesale_price": 80.65
+  },
+  {
+    "restock_date": "2018-12-01T10:00:00Z",
+    "item_stocked": "tires",
+    "item_quantity": 20,
+    "manufacturer": "Great Glacier Goods, Inc.",
+    "wholesale_price": 82.35
+  }
+]

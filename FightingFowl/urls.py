@@ -12,5 +12,5 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^form/$', views.model_form_upload, name='model_form_upload'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^form/process_diff$', views.process_diff, name='process_diff')
+    url(r'^form/parse_json$', views.parse_json, name='results')
 ]

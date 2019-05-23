@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from StockerChecker.forms import DocumentForm
+from django.http import HttpResponseRedirect
 from pprint import pprint
 import json
 import os
@@ -30,12 +31,33 @@ def model_form_upload(request):
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return render(request, 'model_form_upload.html')
+            return HttpResponseRedirect( request.path_info )
     else:
         form = DocumentForm()
     return render(request, 'model_form_upload.html', {
         'form': form
     })
+
+# def calculate_success( orders_list, restock_list ):
+#     month = 0
+#     quantity_left = 0
+#     results = ''
+
+#     for orders in orders_list:
+#         order_number = 0
+#         for tuple_ in orders:
+#             print('my tuple: ' + str( tuple_ ) )
+#             quantity_left = int(restock_list[month][0][2]) - int(tuple_[0])
+#             if( quantity_left > -1 ):
+#                 results = 'success ' + 'quantity left: ' + str(quantity_left)
+
+#             else:
+#                 results = 'month: ' + str( month ) + ' day: ' + str(tuple_[1]) + " quantity left: " + str(quantity_left) + ' fail'
+#                 break
+#             order_number = order_number + 1
+
+#         restock_list[month].append( results )
+#         month = month + 1
 
 def calculate_success( orders_list, restock_list ):
     month = 0
@@ -43,12 +65,13 @@ def calculate_success( orders_list, restock_list ):
     results = ''
 
     for orders in orders_list:
+
         order_number = 0
+        quantity_left = int(restock_list[month][0][2])
         for tuple_ in orders:
-            quantity_left = int(restock_list[month][0][2]) - int(tuple_[0])
+            quantity_left = quantity_left - int(tuple_[1])
             if( quantity_left > -1 ):
                 results = 'success ' + 'quantity left: ' + str(quantity_left)
-
             else:
                 results = 'month: ' + str( month ) + ' day: ' + str(tuple_[1]) + " quantity left: " + str(quantity_left) + ' fail'
                 break
@@ -57,7 +80,7 @@ def calculate_success( orders_list, restock_list ):
         restock_list[month].append( results )
         month = month + 1
 
-def process_diff(request):
+def parse_json(request):
     skis =        [ list() for x in range( 12 ) ]
     shovels =     [ list() for x in range( 12 ) ]
     sleds =       [ list() for x in range( 12 ) ]
@@ -71,8 +94,8 @@ def process_diff(request):
     tires_restock =       [ list() for x in range( 12 ) ]
 
     cwd = os.getcwd()
-    relative_path = os.path.join( os.getcwd(), 'media', 'documents', 'upload1test.json')
-    relative_path_restock = os.path.join( os.getcwd(), 'media', 'documents', 'upload2test.json')
+    relative_path = os.path.join( os.getcwd(), 'media', 'documents', 'orders.json')
+    relative_path_restock = os.path.join( os.getcwd(), 'media', 'documents', 'restocks.json')
 
     with open( relative_path ) as json_file:
         data = json.load( json_file )
