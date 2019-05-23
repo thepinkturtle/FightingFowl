@@ -1,25 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<div style="height:80px; margin-bottom:10px; margin-right:auto; margin-left:auto; width:50%; background-color:cornsilk; padding-top:10px;">
-    <form method="post" enctype="multipart/form-data"  style="display: inline; margin:10px">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit" class="myButton" style="margin-left:40%; margin-top:10px;"> Upload Orders </button>
-    </form>
-</div>
-<div style="height:80px; margin-bottom:10px; margin-right:auto; margin-left:auto; width:50%; background-color:cornsilk; padding-top:10px;">
-    <form method="post" enctype="multipart/form-data" style="display: inline; margin:10px">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit" class="myButton" style="margin-left:39%; margin-top:10px;"> Upload Restocks </button>
-    </form>
-</div>
-<div style="height:50px; margin-bottom:10px; margin-right:auto; margin-left:auto; width:80px;">
-    <form action="parse_json" method="GET">
-        <button type="submit" class="myButton">Process</button>
-    </form>
-</div>
+    <div class="card card-5" style="margin-left:20%;height:80px; width:50%; background-color:cornsilk; padding-top:10px;">
+        <form method="post" enctype="multipart/form-data"  style="display: inline; margin:10px">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="myButton" style="margin-left:auto; margin-right:auto; width:200px; margin-top:10px;"> Upload Orders </button>
+        </form>
+    </div>
+    <div class="card card-5" style="margin-left:21%; height:150px; width:50%; background-color:cornsilk; padding-top:10px">
+        <form method="post" enctype="multipart/form-data" style="display: inline; margin:10px">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="myButton" style="margin-left:auto; margin-right:auto; width:200px; margin-top:10px;"> Upload Restocks </button>
+        </form>
+        <div style="height:50px; margin-bottom:10px; margin-top:20px; margin-right:auto; margin-left:auto; width:80px;">
+            <form action="parse_json" method="GET">
+                <button type="submit" class="myButton">Process</button>
+            </form>
+        </div>
+    </div>
 {% endblock %}
 
