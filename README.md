@@ -16,4 +16,10 @@ and they will be named ``orders.json`` and ``restocks.json``
  - Python 2.7 or later
 
 #### Installation
-  - ``git clone ``
+  - ``git clone https://github.com/thepinkturtle/FightingFowl.git``
+  - ``cd FightingFowl``
+  - ``cd FigntingFowl`` again
+  - run ``python manage.py runserver``
+  - upload the orders.json and restock.json files
+  - click on the 'Process' button
+  - view the results.
