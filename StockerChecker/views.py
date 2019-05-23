@@ -142,10 +142,9 @@ def parse_json(request):
     return render(request, 'results.html', 
             {
                 'skis_results': [ x[1] for x in skis_restock ],
-                'sleds_results': sleds_restock,
-                'shovels_results': shovels_restock,
-                'snowblowers_results': snowblowers_restock,
-                'tires_results': tires_restock,
-                'message':'I made it',
+                'sleds_results':[ x[1] for x in sleds_restock ],
+                'shovels_results': [ x[1] for x in shovels_restock],
+                'snowblowers_results': [ x[1] for x in snowblowers_restock],
+                'tires_results': [ x[1] for x in tires_restock],
             }
         )
