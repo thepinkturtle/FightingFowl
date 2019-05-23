@@ -92,11 +92,39 @@ def process_diff(request):
         date = i['restock_date'].split('-', 3 )
         month = date[1]
         
+        if( i['item_stocked'] == 'skis' ):
+            item = ( 'skis', int( month ), int( i['item_quantity'] ) )
+            skis_restock[ int( month ) - 1 ].append( item )
+    
         if( i['item_stocked'] == 'shovel' ):
             item = ( 'shovel', int( month ), int( i['item_quantity'] ) )
             shovels_restock[ int( month ) - 1 ].append( item )
     
+        if( i['item_stocked'] == 'sled' ):
+            item = ( 'sled', int( month ), int( i['item_quantity'] ) )
+            sleds_restock[ int( month ) - 1 ].append( item )
+    
+        if( i['item_stocked'] == 'snowblower' ):
+            item = ( 'snowblower', int( month ), int( i['item_quantity'] ) )
+            snowblowers_restock[ int( month ) - 1 ].append( item )
+    
+        if( i['item_stocked'] == 'tires' ):
+            item = ( 'tires', int( month ), int( i['item_quantity'] ) )
+            tires_restock[ int( month ) - 1 ].append( item )
+    
+    for m in skis_restock:
+        print( 'month: ' + str(m) )
+    print('\n')
     for m in shovels_restock:
+        print( 'month: ' + str(m) )
+    print('\n')
+    for m in sleds_restock:
+        print( 'month: ' + str(m) )
+    print('\n')
+    for m in snowblowers_restock:
+        print( 'month: ' + str(m) )
+    print('\n')
+    for m in tires_restock:
         print( 'month: ' + str(m) )
     #print( '\n')
     #for m in shovels:
