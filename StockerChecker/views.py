@@ -50,6 +50,12 @@ def process_diff(request):
     snowblowers_restock = [ list() for x in range( 12 ) ]
     tires_restock =       [ list() for x in range( 12 ) ]
 
+    skis_count =         0
+    shovels_count =      0
+    sleds_count =        0
+    snowblowers_count =  0
+    tires_count =        0
+
     cwd = os.getcwd()
     relative_path = os.path.join( os.getcwd(), 'media', 'documents', 'upload1test.json')
     relative_path_restock = os.path.join( os.getcwd(), 'media', 'documents', 'upload2test.json')
@@ -87,7 +93,6 @@ def process_diff(request):
             item  = ( day, int(i['item_quantity']) )
             tires[ int( month ) - 1 ].append( item  )
 
-
     for i in data_restock:
         date = i['restock_date'].split('-', 3 )
         month = date[1]
@@ -111,32 +116,60 @@ def process_diff(request):
         if( i['item_stocked'] == 'tires' ):
             item = ( 'tires', int( month ), int( i['item_quantity'] ) )
             tires_restock[ int( month ) - 1 ].append( item )
+            
+    month = 0
+    quantity_left = 0
+    test = 'Fail'
+    day_month_fail = ''
+
+    for orders in skis:
+        order_number = 0
+        for tuple_ in orders:
+            quantity_left = int(skis_restock[month][0][2]) - int(tuple_[0])
+            if( quantity_left > 0 ):
+                test = 'success ' + 'quantity left: ' + str(quantity_left)
+
+            else:
+                test = 'fail'
+                day_month_fail = 'month: ' + str( month ) + ' day: ' + str(tuple_[1]) + " quantity left: " + str(quantity_left)
+                skis_restock[month].append( day_month_fail)
+                break
+            order_number = order_number + 1
+        skis_restock[month].append( test )
+        month = month + 1
+
     
     for m in skis_restock:
         print( 'month: ' + str(m) )
-    print('\n')
-    for m in shovels_restock:
-        print( 'month: ' + str(m) )
-    print('\n')
-    for m in sleds_restock:
-        print( 'month: ' + str(m) )
-    print('\n')
-    for m in snowblowers_restock:
-        print( 'month: ' + str(m) )
-    print('\n')
-    for m in tires_restock:
-        print( 'month: ' + str(m) )
+    # for m in skis_restock:
+    #     print( skis_restock[1][0][2])
+    # print('\n')
+    # for m in shovels_restock:
+    #     print( 'month: ' + str(m) )
+    # print('\n')
+    # for m in sleds_restock:
+    #     print( 'month: ' + str(m) )
+    # print('\n')
+    # for m in snowblowers_restock:
+    #     print( 'month: ' + str(m) )
+    # print('\n')
+    # for m in tires_restock:
+    #     print( 'month: ' + str(m) )
     #print( '\n')
-    #for m in shovels:
+    
+    # for m in skis_restock:
     #    print( 'month: ' + str(m) )
-    #print( '\n')
-    #for m in sleds:
+    # print( '\n')
+    # for m in shovels:
     #    print( 'month: ' + str(m) )
-    #print( '\n')
-    #for m in snowblowers:
+    # print( '\n')
+    # for m in sleds:
     #    print( 'month: ' + str(m) )
-    #print( '\n')    
-    #for m in tires:
+    # print( '\n')
+    # for m in snowblowers:
+    #    print( 'month: ' + str(m) )
+    # print( '\n')    
+    # for m in tires:
     #    print( 'month: ' + str(m) )
 
     return render(request, 'model_form_upload.html')
