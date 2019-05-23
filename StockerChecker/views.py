@@ -6,9 +6,9 @@ from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from StockerChecker.forms import DocumentForm
 from pprint import pprint
-from itertools import izip
 import json
 import os
+import array
 
 
 # Create your views here.
@@ -38,34 +38,77 @@ def model_form_upload(request):
     })
 
 def process_diff(request):
-    skis_ = "Skis"
-    shovels_ = "Shovels"
-    sleds_ = "Sleds"
-    snowblowers_ = "Snowblowers"
-    winter_tires_ = "Winter tires"
-    year = ""
-    month = ""
-    day_time = ""
-    day = ""
-    time = ""
-    date = ""
+    skis =        [ list() for x in range( 12 ) ]
+    shovels =     [ list() for x in range( 12 ) ]
+    sleds =       [ list() for x in range( 12 ) ]
+    snowblowers = [ list() for x in range( 12 ) ]
+    tires =       [ list() for x in range( 12 ) ]
+    
+    skis_restock =        [ list() for x in range( 12 ) ]
+    shovels_restock =     [ list() for x in range( 12 ) ]
+    sleds_restock =       [ list() for x in range( 12 ) ]
+    snowblowers_restock = [ list() for x in range( 12 ) ]
+    tires_restock =       [ list() for x in range( 12 ) ]
 
     cwd = os.getcwd()
     relative_path = os.path.join( os.getcwd(), 'media', 'documents', 'upload1test.json')
-    print( relative_path )
+    relative_path_restock = os.path.join( os.getcwd(), 'media', 'documents', 'upload2test.json')
 
     with open( relative_path ) as json_file:
         data = json.load( json_file )
+
+    with open( relative_path_restock ) as json_file_restock:
+        data_restock = json.load( json_file_restock )
+
     for i in data:
         date = i['order_date'].split('-', 3 )
         year = date[0]
         month = date[1]
-        day_time = date[2].split('T', 2)
+        day_time = date[2].split('T', 1)
         day = day_time[0]
-        time = day_time[1]
+
+        if( i['item_ordered'] == 'skis'):
+            item = ( day, int(i['item_quantity']) )
+            skis[ int( month ) - 1 ].append( item  )
         
-        print ('item_ordered: ' + i['item_ordered'] + ': ' + i['item_quantity'] + ' Year: '  +  year + " Month: " + month + " Day: " + day + " time: " + time  )
+        if( i['item_ordered'] == 'shovel'):
+            item = ( day, int(i['item_quantity']) )
+            shovels[ int( month ) - 1 ].append( item  )
+
+        if( i['item_ordered'] == 'sled'):
+            item  = ( day, int(i['item_quantity']) )
+            sleds[ int( month ) - 1 ].append( item  )
         
-   
-            
+        if( i['item_ordered'] == 'snowblower'):
+            item  = ( day, int(i['item_quantity']) )
+            snowblowers[ int( month ) - 1 ].append( item  )
+        
+        if( i['item_ordered'] == 'tires'):
+            item  = ( day, int(i['item_quantity']) )
+            tires[ int( month ) - 1 ].append( item  )
+
+
+    for i in data_restock:
+        date = i['restock_date'].split('-', 3 )
+        month = date[1]
+        
+        if( i['item_stocked'] == 'shovel' ):
+            item = ( 'shovel', int( month ), int( i['item_quantity'] ) )
+            shovels_restock[ int( month ) - 1 ].append( item )
+    
+    for m in shovels_restock:
+        print( 'month: ' + str(m) )
+    #print( '\n')
+    #for m in shovels:
+    #    print( 'month: ' + str(m) )
+    #print( '\n')
+    #for m in sleds:
+    #    print( 'month: ' + str(m) )
+    #print( '\n')
+    #for m in snowblowers:
+    #    print( 'month: ' + str(m) )
+    #print( '\n')    
+    #for m in tires:
+    #    print( 'month: ' + str(m) )
+
     return render(request, 'model_form_upload.html')
