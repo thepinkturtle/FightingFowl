@@ -19,6 +19,6 @@ and they will be named ``orders.json`` and ``restocks.json``
   - ``git clone https://github.com/thepinkturtle/FightingFowl.git``
   - ``cd FightingFowl``
   - run ``python manage.py runserver``
-  - upload the orders.json and restock.json files
+  - upload the ``orders.json`` and ``restock.json`` files
   - click on the 'Process' button
   - view the results.
