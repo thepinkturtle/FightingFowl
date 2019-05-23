@@ -109,7 +109,7 @@ def parse_json(request):
             item  = ( day, int(i['item_quantity']) )
             tires[ int( month ) - 1 ].append( item  )
 
-    for i in data_restock:
+    for i in data_restock:  
         date = i['restock_date'].split('-', 3 )
         month = date[1]
         
@@ -138,29 +138,10 @@ def parse_json(request):
     calculate_success( shovels, shovels_restock )
     calculate_success( snowblowers, snowblowers_restock )
     calculate_success( tires, tires_restock )
-    
-    for m in skis_restock:
-        print( 'month: ' + str(m) )
-    print('\n')
-    
-    for m in sleds_restock:
-        print( 'month: ' + str(m) )
-    print('\n')
-    
-    for m in shovels_restock:
-        print( 'month: ' + str(m) )
-    print('\n')
-    
-    for m in snowblowers_restock:
-        print( 'month: ' + str(m) )
-    print('\n')
-    
-    for m in tires_restock:
-        print( 'month: ' + str(m) )
 
     return render(request, 'results.html', 
             {
-                'skis_results': skis_restock,
+                'skis_results': [ x[1] for x in skis_restock ],
                 'sleds_results': sleds_restock,
                 'shovels_results': shovels_restock,
                 'snowblowers_results': snowblowers_restock,
