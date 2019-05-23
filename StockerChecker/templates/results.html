@@ -1,38 +1,41 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div class="card card-5" style=" font-size:90px; height:100px; width:500px; margin-left:30%; background-color:#5B5177; font-family:Arial;">
+        Results
+    </div>
 <div style="height:100%; width:100%;">
     <div style="padding-left:15%;">
-        <div class="card card-5" style="float:left; height:350px; width:300px; background-color:cornsilk;margin:0px 5px 10px 10px; font-family:Arial;">
-            <p style="font-size: x-large; color:#ff9900; text-align:center;">Skis</p>
+        <div class="card card-5" style="float:left; height:350px; width:300px; background-color:#6D896F;margin:0px 5px 10px 10px; font-family:Arial;">
+            <p class="card card-1" style="font-size: x-large; color:black; text-align:center; background-color:#928B7A; height:30px; width:200px;">Skis</p>
             <div style="text-align:center">
                 {{skis_results|join:"<br/>"}}
             </div>
         </div>
-        <div class="card card-5" style="float:left; height:350px; width:300px; background-color:cornsilk;margin:0px 5px 10px 5px; font-family:Arial;">
-            <p style="font-size: x-large; color:#ff9900; text-align:center;">Sleds</p>
+        <div class="card card-5" style="float:left; height:350px; width:300px; background-color:#6D896F;margin:0px 5px 10px 5px; font-family:Arial;">
+            <p class="card card-1" style="font-size: x-large; color:black; text-align:center; background-color:#928B7A; height:30px; width:200px;">Sleds</p>
             <div style="text-align:center">
                 {{sleds_results|join:"<br/>"}}
             </div>
         </div>
 
-        <div class="card card-5" style="float:left; height:350px; width:300px; background-color:cornsilk;margin:0px 5px 10px 5px; font-family:Arial;">
-            <p style="font-size: x-large; color:#ff9900; text-align:center;">Shovels</p>
+        <div class="card card-5" style="float:left; height:350px; width:300px; background-color:#6D896F;margin:0px 5px 10px 5px; font-family:Arial;">
+            <p class="card card-1" style="font-size: x-large; color:black; text-align:center; background-color:#928B7A; height:30px; width:200px;">Shovels</p>
             <div style="text-align:center">
                 {{shovels_results|join:"<br/>"}}
             </div>
         </div>
     </div>
     <div style="padding-left:15%;">
-        <div class="card card-5" style="float:left; height:350px; width:300px; background-color:cornsilk;margin:0px 5px 10px 10px; font-family:Arial;">
-            <p style="font-size: x-large; color:#ff9900; text-align:center;">Snowblowers</p>
+        <div class="card card-5" style="float:left; height:350px; width:300px; background-color:#6D896F;margin:0px 5px 10px 10px; font-family:Arial;">
+            <p class="card card-1" style="font-size: x-large; color:black; text-align:center; background-color:#928B7A; height:30px; width:200px;">Snowblowers</p>
             <div style="text-align:center">
                 {{snowblowers_results|join:"<br/>"}}
             </div>
         </div>
 
-        <div class="card card-5" style="float:left; height:350px; width:300px; background-color:cornsilk;margin:0px 10px 10px 5px; font-family:Arial;">
-            <p style="font-size: x-large; color:#ff9900; text-align:center;">Tires</p>
+        <div class="card card-5" style="float:left; height:350px; width:300px; background-color:#6D896F;margin:0px 10px 10px 5px; font-family:Arial;">
+            <p class="card card-1" style="font-size: x-large; color:black; text-align:center; background-color:#928B7A; height:30px; width:200px;">Tires</p>
             <div style="text-align:center">
                 {{tires_results|join:"<br/>"}}
             </div>
