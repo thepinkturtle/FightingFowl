@@ -44,15 +44,15 @@ def calculate_success( orders_list, restock_list, year ):
     results = ''
 
     for orders in orders_list:
-
         order_number = 0
         quantity_left = int(restock_list[month][0][2])
         for tuple_ in orders:
             quantity_left = quantity_left - int(tuple_[1])
+            old_results = results
             if( quantity_left > -1 ):
-                results = 'success ' + 'quantity left: ' + str(quantity_left)
+                results = 'Date: ' + str( month + 1 ) + '/' + str( year )+ ' Success ' + 'quantity: ' + str(quantity_left)
             else:
-                results = 'Date: ' + str( month + 1 ) + '/' + str(tuple_[1]) + '/' + str( year )  + ': failed'
+                results = 'Date: ' + str( month + 1 ) + '/' + str(tuple_[1]) + '/' + str( year )  + ': Failed '
                 break
             order_number = order_number + 1
 
