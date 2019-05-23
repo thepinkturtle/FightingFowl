@@ -1,27 +1,37 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div style="display: inline; height: 100px; width: 50px; background-color:darkgrey;">
     <div>
-        <p>Skis</p>
+        <p style="font-size: x-large; color:#ff9900">Skis</p>
         {{skis_results|join:"<br/>"}}
     </div>
     <div>
-        <p>Sleds</p>
+        <p style="font-size: x-large; color:#ff9900">Sleds</p>
         {{sleds_results|join:"<br/>"}}
     </div>
 
     <div>
-        <p>Shovels</p>
+        <p style="font-size: x-large; color:#ff9900">Shovels</p>
         {{shovels_results|join:"<br/>"}}
     </div>
 
     <div>
-        <p>Snowblowers</p>
+        <p style="font-size: x-large; color:#ff9900">Snowblowers</p>
         {{snowblowers_results|join:"<br/>"}}
     </div>
 
     <div>
-        <p>Tires</p>
+        <p style="font-size: x-large; color:#ff9900">Tires</p>
         {{tires_results|join:"<br/>"}}
     </div>
+</div>
+
+    <!--<div>
+        <select>
+            {% for element in skis_results %}
+            <option value="Skis">{{element}}</option>
+            {% endfor %}
+        </select>
+    </div>-->
 {% endblock %}
