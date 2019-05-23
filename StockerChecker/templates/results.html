@@ -1,5 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p>{{sleds_results}}</p>
+    <div>
+        <p>Skis</p>
+        {{skis_results|join:"<br/>"}}
+    </div>
+    <div>
+        <p>Sleds</p>
+        {{sleds_results|join:"<br/>"}}
+    </div>
+
+    <div>
+        <p>Shovels</p>
+        {{shovels_results|join:"<br/>"}}
+    </div>
+
+    <div>
+        <p>Snowblowers</p>
+        {{snowblowers_results|join:"<br/>"}}
+    </div>
+
+    <div>
+        <p>Tires</p>
+        {{tires_results|join:"<br/>"}}
+    </div>
 {% endblock %}
