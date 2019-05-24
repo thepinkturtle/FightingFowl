@@ -22,4 +22,4 @@ and they will be named ``orders.json`` and ``restocks.json``
   - upload the ``orders.json`` and ``restock.json`` files
   - click on the 'Process' button
   - view the results. 
-  - Notes: if the terminal doesn't give you the IP to access the app it type ``http://127.0.0.1:8000/`` into your browser address bar
+  - Notes: if the terminal doesn't give you the URL to access the app type ``http://127.0.0.1:8000/`` into your browser address bar
