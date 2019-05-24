@@ -20,6 +20,7 @@ and they will be named ``orders.json`` and ``restocks.json``
   - ``cd FightingFowl``
   - run ``python manage.py runserver``
   - upload the ``orders.json`` and ``restock.json`` files
+   - Note: you must click the 'Upload ...' button after you select each file, i.e., 'choose file' then click 'Upload ...' 
   - click on the 'Process' button
   - view the results. 
-  - Notes: if the terminal doesn't give you the URL to access the app type ``http://127.0.0.1:8000/`` into your browser address bar
+  - Note: if the terminal doesn't give you the URL to access the app type ``http://127.0.0.1:8000/`` into your browser address bar
